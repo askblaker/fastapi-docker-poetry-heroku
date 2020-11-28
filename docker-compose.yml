@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  api:
+    container_name: api
+    build: .
+    ports:
+      - "6464:80"
+    volumes:
+      - "./app:/app/"
+    command:
+      - "/start-reload.sh"
